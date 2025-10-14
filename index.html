@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+      GROUP CONTRACT & ASSIGNMENT DETAILS
+      Project: Shopper Management Web Page
+      Team:
+        1) Muhammad Khalid – HTML structure & documentation
+        2) Ishaan Luitel – JavaScript + JSON integration
+        3) Jonathan Lachman – CSS + Bootstrap styling
+      Note: Each section below is tagged with the contributor.
+    -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Storefront • Shopper Management</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS (Jonathan) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<!-- [Muhammad] Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="L1.html">Storefront</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+                aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="L1.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Shopper Management</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- [Muhammad] Main -->
+<main class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+
+            <header class="text-center mb-4">
+                <h1 class="display-6 text-primary fw-bold">Shopper Management</h1>
+                <p class="text-muted">Create / update shopper details</p>
+            </header>
+
+            <!-- [Muhammad] Form -->
+            <div class="card shadow-lg mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h5 m-0">Shopper Details Form</h2>
+                </div>
+                <div class="card-body">
+                    <form id="shopperForm" novalidate>
+                        <!-- Email (required) -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Shopper Email Address <span class="text-danger">*</span></label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="example@aol.com" required>
+                            <div class="invalid-feedback">Please enter a valid email.</div>
+                        </div>
+
+                        <!-- Name (required) -->
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Shopper Name <span class="text-danger">*</span></label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="John Smith" required>
+                            <div class="invalid-feedback">Please enter a name.</div>
+                        </div>
+
+                        <!-- Phone (optional) -->
+                        <div class="mb-3">
+                            <label for="contact-phone" class="form-label">Shopper Contact Phone Number</label>
+                            <input type="tel" id="contact-phone" name="contact-phone" class="form-control" placeholder="Phone Number">
+                            <div class="form-text">Optional</div>
+                        </div>
+
+                        <!-- Age (required) -->
+                        <div class="mb-3">
+                            <label for="age" class="form-label">Shopper Age <span class="text-danger">*</span></label>
+                            <input type="number" id="age" name="age" class="form-control" placeholder="45" min="18" max="120" required>
+                            <div class="invalid-feedback">Age must be between 18 and 120.</div>
+                        </div>
+
+                        <!-- Address (required) -->
+                        <div class="mb-4">
+                            <label for="address" class="form-label">Shopper Address <span class="text-danger">*</span></label>
+                            <textarea id="address" name="address" class="form-control" rows="3" placeholder="123 College Ave" required></textarea>
+                            <div class="invalid-feedback">Please enter an address.</div>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- [Muhammad/Ishaan] JSON output -->
+            <div class="card shadow-lg d-none" id="jsonCard">
+                <div class="card-header bg-success text-white">
+                    <h2 class="h6 m-0">JSON Output</h2>
+                </div>
+                <div class="card-body">
+                    <pre id="jsonContent" class="bg-dark text-light p-3 rounded" style="min-height: 140px;"></pre>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<footer class="text-center text-muted py-4 small">
+    Alpha Web Storefront: Project 256
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS (Ishaan) -->
+<script src="shopper.js"></script>
+</body>
+</html>
