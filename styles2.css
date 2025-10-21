@@ -1,0 +1,41 @@
+/* Jonathan Lachman:  CSS & Bootstrap styling */
+.card { border: 0; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,.06); }
+.card-header { border-top-left-radius: 12px !important; border-top-right-radius: 12px !important; }
+.form-label { font-weight: 500; }
+.btn-bar { width:100%; border-radius:10px; padding:.9rem 1rem; font-weight:600; }
+
+/* JSON area */
+.json-box {
+    background:#f8f9fa;
+    border:1px solid #dee2e6;
+    border-radius:8px;
+    padding:12px;
+    min-height:150px;
+    font-size:.95rem;
+    overflow:auto;
+}
+
+/* 🔵 Blue theme everywhere (replaces green) */
+.btn-primary,
+.btn-success {
+    background-color:#0d6efd;
+    border-color:#0d6efd;
+    color:#fff;
+}
+
+.btn-primary:hover,
+.btn-success:hover {
+    background-color:#0b5ed7;
+    border-color:#0a58ca;
+}
+
+.text-primary,
+h1.text-primary,
+h1,
+.section-title { color:#0d6efd !important; }
+
+/* Make any "success" header match the blue theme if used */
+.bg-success { background-color:#0d6efd !important; }
+
+/* Keep Bootstrap primary header consistent */
+.bg-primary { background-color:#0d6efd !important; }
